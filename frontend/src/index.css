@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #171717;
+    --bg-card: rgba(23, 23, 23, 0.5);
+    --bg-card-elevated: rgba(23, 23, 23, 0.8);
+    --text-primary: #fafafa;
+    --text-secondary: #a3a3a3;
+    --text-tertiary: #737373;
+    --border-primary: rgba(38, 38, 38, 0.5);
+    --border-secondary: rgba(38, 38, 38, 0.8);
+  }
+  
+  html.light {
+    --bg-primary: #ffffff;
+    --bg-secondary: #fafafa;
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --bg-card-elevated: #ffffff;
+    --text-primary: #171717;
+    --text-secondary: #404040;
+    --text-tertiary: #525252;
+    --border-primary: rgba(212, 212, 212, 0.8);
+    --border-secondary: rgba(163, 163, 163, 0.6);
+  }
+  
+  * {
+    border-color: var(--border-primary);
+  }
+  
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .card {
+    background-color: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-primary);
+    border-radius: 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .card-elevated {
+    background-color: var(--bg-card-elevated);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-secondary);
+    border-radius: 1rem;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  html.light .card-elevated {
+    box-shadow: 0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #6366f1, #8b94f8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .surface {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .surface-elevated {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+}

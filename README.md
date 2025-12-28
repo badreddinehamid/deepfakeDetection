@@ -301,34 +301,16 @@ When the backend server is running, visit:
 3. **Probability Calculation**: Softmax is applied to get class probabilities
 4. **Prediction**: Class 1 probability > 0.5 indicates "Tampered", otherwise "Authentic"
 
-## 🎨 Screenshots
-
-> **Note**: Add screenshots of your application here
-> 
-> - Landing page
-> - Detection interface
-> - Results display
-> - About page
 
 ## 🔒 Security Notes
 
 - The CORS middleware is currently configured to allow all origins (`allow_origins=["*"]`). In production, replace this with specific allowed origins.
-- The model file (`model.pth`) should not be committed to the repository if it contains proprietary or large files. Use Git LFS or external storage.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
-
-- PyTorch team for the deep learning framework
-- FastAPI for the excellent web framework
-- React and Three.js communities for the frontend tools
-- All open-source contributors whose work made this project possible
 
 ---
 
@@ -337,8 +319,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 **Built with ❤️ by the VeriFrame Team**
 
 © 2025 VeriFrame. All rights reserved.
-
-[Report Bug](https://github.com/yourusername/veriframe/issues) • [Request Feature](https://github.com/yourusername/veriframe/issues) • [Documentation](https://github.com/yourusername/veriframe/wiki)
 
 </div>
 
